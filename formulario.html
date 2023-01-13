@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularios</title>
+    <style>
+    input::placeholder 
+    {
+    font-weight: bold;
+    opacity: 0.5;
+    color: red;
+    }
+    form
+    {
+        background-color: aquamarine;
+        margin: 10px;
+        padding: 5px;
+        margin: auto;
+        width: 100%;
+    }
+    input,textarea,select
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: beige;
+        color: aqua;
+        margin: 3px;
+        border: 2px solid red;
+        border-radius: 3px;
+    }
+    #fecha
+    {
+        background-color: rgb(131, 235, 235);
+    }
+    </style>
+</head>
+<body>
+    <!-- action: envio.php/ disabled="disabled"// tambien se usa disabled en los check//style =""  readonly="readonly"-->
+    <form name="form1" style="margin-left: 100px;" action="mailto:juanito@g.educaand.es" method="post">
+        <label for="Nombre">Nombre:</label> <input type="text" id="Nombre" name="Nombre" value="" placeholder="Buscar...">
+        <br>
+        <label for="Boton">Botón:</label> <input type="button" id="Boton" name="Boton" value="" placeholder="Buscar...">
+        <br>
+        <label for="cuadrado">Si:</label> <input type="checkbox" id="cuadrado" name="cuadrado" checked> <input type="checkbox" id="cuadrado" name="cuadrado" >
+        <br>
+        <label for="color">Color:</label> <input type="color" id="color" name="color" value="" >
+        <br>
+        <label for="fecha">Fecha:</label> <input type="date" id="fecha" name="fecha" value="" >
+        <br>
+        <label for="hora">Hora:</label> <input type="datetime-local" id="hora" name="hora" value="" >
+        <br>
+        <label for="email">Correo:</label> <input type="email" id="email" name="email" value="" placeholder=".................@gmail.com">
+        <br>
+        <label for="Mes">Mes:</label> <input type="month" id="Mes" name="Mes" value="" placeholder="">
+        <br>
+        <label for="Numero">Numero:</label> <input type="Numero" id="Numero" name="Numero" value="" placeholder="">
+        <br>
+        <label for="Password">Password:</label> <input type="Password" id="Password" name="Password" value="" placeholder="">
+        <br>
+        <label for="Radio">Radio:</label>Mujer <input type="Radio" id="Radio" name="Radio" value="Mujer" placeholder="">
+        Hombre<input type="Radio" id="Radio" name="Radio" value="Mujer" placeholder=""></input>
+        <br>
+        <label for="Edad">Edad:</label><input type="range" id="Edad" name="Edad" min= "0"  max="130" step="1" value="18">
+        <br>
+        <label for="Buscar">Buscar:</label><input type="search" id="buscar" name="buscar">
+        <br>
+        <label for="url">Url:</label><input type="url" id="url" name="url">
+        <br>
+
+        <textarea rows="10" cols="100">El texto que aparece entre las dos etiquetas</textarea>
+        <br>
+        <!-- listas desplegables -->
+        Perfil profesional:
+        <select name="Profesón">
+            <option value="">Programador</option>
+            <option value="Programador">Analista Programador</option>
+            <option value="Analista">Jefe de proyecto</option>
+            <option value="Jefe">Analista de sistemas</option>
+            <option value="Analista sistemas">Director</option>
+        </select>
+        <br>
+        <input type="submit" value="Mandar">
+        <input type="reset" value="Borrar">
+    </form>
+</body>
+</html>
